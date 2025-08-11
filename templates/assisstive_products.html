@@ -1,0 +1,445 @@
+{% extends "base.html" %}
+
+{% block title %}Assistive Products & Technology - Disability Support India{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-success text-white py-4" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-2">
+                    <i class="fas fa-tools me-2" aria-hidden="true"></i>
+                    Assistive Products & Technology
+                </h1>
+                <p class="lead mb-0">
+                    Discover aids, devices, and technologies to enhance independence and quality of life
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="#application-process" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-clipboard-list me-2" aria-hidden="true"></i>
+                    Apply for Aids
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories -->
+<section class="py-5" role="region" aria-labelledby="product-categories">
+    <div class="container">
+        <h2 id="product-categories" class="text-center mb-5">Product Categories</h2>
+        
+        <div class="row g-4">
+            <!-- Visual Impairment -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-eye fa-3x text-primary" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Visual Impairment</h3>
+                        <p class="card-text text-muted mb-4">Aids for blind and visually impaired individuals</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Braille Displays and Keyboards
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Screen Reading Software
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    White Canes and Mobility Aids
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Voice Recorders and Players
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Magnification Devices
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-primary">Government Subsidy Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hearing Impairment -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-deaf fa-3x text-info" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Hearing Impairment</h3>
+                        <p class="card-text text-muted mb-4">Devices for deaf and hard of hearing individuals</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Hearing Aids (Digital/Analog)
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Cochlear Implants
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    FM Systems and Amplifiers
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Vibrating Alarm Clocks
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    TTY/TDD Communication Devices
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-info">Free Repair Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobility Impairment -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-wheelchair fa-3x text-warning" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Mobility Impairment</h3>
+                        <p class="card-text text-muted mb-4">Mobility aids and assistive devices</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Wheelchairs (Manual/Electric)
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Walking Aids and Crutches
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Prosthetic Limbs
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Orthotic Devices
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Standing and Transfer Aids
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-warning text-dark">Custom Fitting Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Communication Aids -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-comments fa-3x text-secondary" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Communication Aids</h3>
+                        <p class="card-text text-muted mb-4">Devices for speech and communication support</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Speech Generating Devices
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Communication Boards
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Voice Amplifiers
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Tablet-based Communication Apps
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Switch Activated Devices
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-secondary">Training Included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cognitive Aids -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-brain fa-3x text-danger" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Cognitive Aids</h3>
+                        <p class="card-text text-muted mb-4">Tools for memory and cognitive support</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Memory Aids and Organizers
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Medication Reminders
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    GPS Tracking Devices
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Reading and Learning Software
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Simple Communication Devices
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-danger">Assessment Required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Daily Living Aids -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm category-card">
+                    <div class="card-body text-center p-4">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-home fa-3x text-success" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h4">Daily Living Aids</h3>
+                        <p class="card-text text-muted mb-4">Tools for independent daily activities</p>
+                        
+                        <div class="product-list text-start">
+                            <h4 class="h6 fw-bold mb-3">Available Products:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Adaptive Kitchen Utensils
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Bathroom Safety Equipment
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Dressing and Grooming Aids
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Reaching and Grasping Tools
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Bed and Chair Adaptations
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <span class="badge bg-success">Home Assessment Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Process -->
+<section id="application-process" class="py-5 bg-light" role="region" aria-labelledby="application-heading">
+    <div class="container">
+        <h2 id="application-heading" class="text-center mb-5">How to Apply for Assistive Devices</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="application-steps">
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Medical Assessment</h3>
+                            <p class="text-muted">Get assessed by a certified medical professional to determine your specific needs and eligibility for assistive devices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Document Preparation</h3>
+                            <p class="text-muted">Gather required documents including disability certificate, income proof, medical prescription, and identity proof.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Application Submission</h3>
+                            <p class="text-muted">Submit your application through the ADIP scheme portal, district collector office, or designated implementing agencies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Verification & Approval</h3>
+                            <p class="text-muted">Your application will be verified and processed. Approval typically takes 2-4 weeks depending on the device type.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex">
+                        <div class="step-number bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">5</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Device Fitting & Training</h3>
+                            <p class="text-muted">Receive your device with proper fitting, training on usage, and follow-up support for maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-3">
+                <i class="fas fa-file-alt me-2" aria-hidden="true"></i>
+                Start Application
+            </a>
+            <a href="tel:011-2338-1234" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-phone me-2" aria-hidden="true"></i>
+                Call for Assistance
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Suppliers and Resources -->
+<section class="py-5" role="region" aria-labelledby="suppliers-heading">
+    <div class="container">
+        <h2 id="suppliers-heading" class="text-center mb-5">Authorized Suppliers & Resources</h2>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h5">
+                            <i class="fas fa-store text-primary me-2" aria-hidden="true"></i>
+                            Government Authorized Suppliers
+                        </h3>
+                        <p class="card-text">Find certified suppliers for government-subsidized assistive devices</p>
+                        
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Artificial Limbs Manufacturing Corporation (ALIMCO)</strong><br>
+                                <small class="text-muted">Kanpur, Uttar Pradesh • 0512-2295-286</small>
+                            </li>
+                            <li class="mb-2">
+                                <strong>National Institute for the Orthopaedically Handicapped (NIOH)</strong><br>
+                                <small class="text-muted">Kolkata, West Bengal • 033-2455-0871</small>
+                            </li>
+                            <li class="mb-2">
+                                <strong>Mobility India</strong><br>
+                                <small class="text-muted">Bangalore, Karnataka • 080-2648-8879</small>
+                            </li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-outline-primary">View All Suppliers</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h5">
+                            <i class="fas fa-download text-success me-2" aria-hidden="true"></i>
+                            Downloadable Resources
+                        </h3>
+                        <p class="card-text">Access forms, brochures, and guidelines for assistive technology</p>
+                        
+                        <div class="resource-links">
+                            <a href="#" class="d-block mb-2 text-decoration-none">
+                                <i class="fas fa-file-pdf text-danger me-2" aria-hidden="true"></i>
+                                ADIP Scheme Application Form
+                            </a>
+                            <a href="#" class="d-block mb-2 text-decoration-none">
+                                <i class="fas fa-file-pdf text-danger me-2" aria-hidden="true"></i>
+                                Assistive Device Catalog 2025
+                            </a>
+                            <a href="#" class="d-block mb-2 text-decoration-none">
+                                <i class="fas fa-file-pdf text-danger me-2" aria-hidden="true"></i>
+                                Maintenance and Repair Guidelines
+                            </a>
+                            <a href="#" class="d-block mb-2 text-decoration-none">
+                                <i class="fas fa-file-pdf text-danger me-2" aria-hidden="true"></i>
+                                Rights of Persons with Disabilities Act 2016
+                            </a>
+                        </div>
+                        
+                        <a href="#" class="btn btn-outline-success">Download All Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
