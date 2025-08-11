@@ -1,0 +1,68 @@
+{
+  "cities": [
+    {
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "region": "Western India",
+      "population": "12442373",
+      "disability_helpline": "022-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Delhi",
+      "state": "Delhi",
+      "region": "Northern India",
+      "population": "16787941",
+      "disability_helpline": "011-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "region": "Southern India",
+      "population": "8443675",
+      "disability_helpline": "080-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "region": "Southern India",
+      "population": "4646732",
+      "disability_helpline": "044-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Kolkata",
+      "state": "West Bengal",
+      "region": "Eastern India",
+      "population": "4496694",
+      "disability_helpline": "033-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Pune",
+      "state": "Maharashtra",
+      "region": "Western India",
+      "population": "3124458",
+      "disability_helpline": "020-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "region": "Southern India",
+      "population": "6809970",
+      "disability_helpline": "040-2266-1212",
+      "emergency_number": "112"
+    },
+    {
+      "name": "Ahmedabad",
+      "state": "Gujarat",
+      "region": "Western India",
+      "population": "5570585",
+      "disability_helpline": "079-2266-1212",
+      "emergency_number": "112"
+    }
+  ]
+}
