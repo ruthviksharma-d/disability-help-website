@@ -1,0 +1,480 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Disability Support India{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-info text-white py-4" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-2">
+                    <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                    Contact Us
+                </h1>
+                <p class="lead mb-0">
+                    Get in touch with us for support, feedback, or to suggest new resources for the disability community
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="tel:1800-111-555" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone me-2" aria-hidden="true"></i>
+                    Call Helpline
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Methods -->
+<section class="py-5" role="region" aria-labelledby="contact-methods">
+    <div class="container">
+        <h2 id="contact-methods" class="text-center mb-5">Get in Touch</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-phone fa-3x text-primary" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Phone Support</h3>
+                        <p class="card-text text-muted mb-4">Speak with our support team for immediate assistance</p>
+                        
+                        <div class="contact-details">
+                            <div class="mb-3">
+                                <strong>National Helpline</strong><br>
+                                <a href="tel:1800-111-555" class="text-decoration-none h4">1800-111-555</a><br>
+                                <small class="text-muted">Toll-free • 24/7 Available</small>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <strong>Grievance Cell</strong><br>
+                                <a href="tel:011-2338-1234" class="text-decoration-none">011-2338-1234</a><br>
+                                <small class="text-muted">Mon-Fri, 9:00 AM - 6:00 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-envelope fa-3x text-success" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Email Support</h3>
+                        <p class="card-text text-muted mb-4">Send us detailed queries and get comprehensive responses</p>
+                        
+                        <div class="contact-details">
+                            <div class="mb-3">
+                                <strong>General Support</strong><br>
+                                <a href="mailto:support@disabilitysupport.gov.in" class="text-decoration-none">
+                                    support@disabilitysupport.gov.in
+                                </a><br>
+                                <small class="text-muted">Response within 24 hours</small>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <strong>Grievance Redressal</strong><br>
+                                <a href="mailto:grievance@disabilitysupport.gov.in" class="text-decoration-none">
+                                    grievance@disabilitysupport.gov.in
+                                </a><br>
+                                <small class="text-muted">For complaints and suggestions</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                    <div class="card-body p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-3x text-warning" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Office Address</h3>
+                        <p class="card-text text-muted mb-4">Visit our regional offices for in-person assistance</p>
+                        
+                        <div class="contact-details">
+                            <div class="mb-3">
+                                <strong>Head Office</strong><br>
+                                <address class="mb-0">
+                                    Department of Empowerment of<br>
+                                    Persons with Disabilities<br>
+                                    Sardar Patel Bhawan<br>
+                                    Sansad Marg, New Delhi - 110001
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="py-5 bg-light" role="region" aria-labelledby="contact-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 id="contact-form" class="text-center mb-5">Send Us a Message</h2>
+                
+                <div class="card border-0 shadow">
+                    <div class="card-body p-5">
+                        <form id="contactForm" role="form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label fw-bold">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" 
+                                           required aria-describedby="firstNameHelp">
+                                    <div id="firstNameHelp" class="form-text">Enter your first name</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label fw-bold">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" 
+                                           required aria-describedby="lastNameHelp">
+                                    <div id="lastNameHelp" class="form-text">Enter your last name</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label fw-bold">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                           required aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll respond to this email address</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" 
+                                           aria-describedby="phoneHelp">
+                                    <div id="phoneHelp" class="form-text">Optional contact number</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="city" class="form-label fw-bold">City</label>
+                                    <select class="form-select" id="city" name="city" aria-describedby="cityHelp">
+                                        <option value="">Select your city</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Ahmedabad">Ahmedabad</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div id="cityHelp" class="form-text">Helps us provide relevant information</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="inquiryType" class="form-label fw-bold">Inquiry Type *</label>
+                                    <select class="form-select" id="inquiryType" name="inquiryType" 
+                                            required aria-describedby="inquiryHelp">
+                                        <option value="">Select inquiry type</option>
+                                        <option value="scheme-information">Scheme Information</option>
+                                        <option value="documentation-help">Documentation Help</option>
+                                        <option value="accessibility-issue">Accessibility Issue</option>
+                                        <option value="grievance">Grievance/Complaint</option>
+                                        <option value="resource-suggestion">Resource Suggestion</option>
+                                        <option value="technical-support">Technical Support</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div id="inquiryHelp" class="form-text">Select the most relevant category</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label fw-bold">Subject *</label>
+                                <input type="text" class="form-control" id="subject" name="subject" 
+                                       required aria-describedby="subjectHelp">
+                                <div id="subjectHelp" class="form-text">Brief description of your inquiry</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label fw-bold">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" 
+                                          required aria-describedby="messageHelp"></textarea>
+                                <div id="messageHelp" class="form-text">Provide detailed information about your inquiry</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="updates" name="updates">
+                                    <label class="form-check-label" for="updates">
+                                        I would like to receive updates about new schemes and services
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        I agree to the <a href="#" class="text-decoration-none">Privacy Policy</a> and 
+                                        <a href="#" class="text-decoration-none">Terms of Service</a> *
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button type="submit" class="btn btn-primary btn-lg me-md-2">
+                                    <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>
+                                    Send Message
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">
+                                    <i class="fas fa-undo me-2" aria-hidden="true"></i>
+                                    Reset Form
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Regional Offices -->
+<section class="py-5" role="region" aria-labelledby="regional-offices">
+    <div class="container">
+        <h2 id="regional-offices" class="text-center mb-5">Regional Offices</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title h5 mb-0">Northern Region</h3>
+                    </div>
+                    <div class="card-body">
+                        <address>
+                            <strong>Regional Office Delhi</strong><br>
+                            Vikas Bhawan, IP Estate<br>
+                            New Delhi - 110002<br>
+                            <i class="fas fa-phone me-1" aria-hidden="true"></i> 011-2337-9821<br>
+                            <i class="fas fa-envelope me-1" aria-hidden="true"></i> 
+                            <a href="mailto:delhi@disabilitysupport.gov.in" class="text-decoration-none">
+                                delhi@disabilitysupport.gov.in
+                            </a>
+                        </address>
+                        
+                        <div class="coverage-area">
+                            <small class="text-muted">
+                                <strong>Coverage:</strong> Delhi, Punjab, Haryana, Himachal Pradesh, Uttarakhand, J&K
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title h5 mb-0">Western Region</h3>
+                    </div>
+                    <div class="card-body">
+                        <address>
+                            <strong>Regional Office Mumbai</strong><br>
+                            Bandra Kurla Complex<br>
+                            Mumbai - 400051<br>
+                            <i class="fas fa-phone me-1" aria-hidden="true"></i> 022-2654-2671<br>
+                            <i class="fas fa-envelope me-1" aria-hidden="true"></i> 
+                            <a href="mailto:mumbai@disabilitysupport.gov.in" class="text-decoration-none">
+                                mumbai@disabilitysupport.gov.in
+                            </a>
+                        </address>
+                        
+                        <div class="coverage-area">
+                            <small class="text-muted">
+                                <strong>Coverage:</strong> Maharashtra, Gujarat, Goa, Rajasthan, Madhya Pradesh
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="card-title h5 mb-0">Southern Region</h3>
+                    </div>
+                    <div class="card-body">
+                        <address>
+                            <strong>Regional Office Bangalore</strong><br>
+                            Vidhana Soudha Complex<br>
+                            Bangalore - 560001<br>
+                            <i class="fas fa-phone me-1" aria-hidden="true"></i> 080-2225-2828<br>
+                            <i class="fas fa-envelope me-1" aria-hidden="true"></i> 
+                            <a href="mailto:bangalore@disabilitysupport.gov.in" class="text-decoration-none">
+                                bangalore@disabilitysupport.gov.in
+                            </a>
+                        </address>
+                        
+                        <div class="coverage-area">
+                            <small class="text-muted">
+                                <strong>Coverage:</strong> Karnataka, Tamil Nadu, Kerala, Andhra Pradesh, Telangana
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="card-title h5 mb-0">Eastern Region</h3>
+                    </div>
+                    <div class="card-body">
+                        <address>
+                            <strong>Regional Office Kolkata</strong><br>
+                            Writers' Building<br>
+                            Kolkata - 700001<br>
+                            <i class="fas fa-phone me-1" aria-hidden="true"></i> 033-2214-5555<br>
+                            <i class="fas fa-envelope me-1" aria-hidden="true"></i> 
+                            <a href="mailto:kolkata@disabilitysupport.gov.in" class="text-decoration-none">
+                                kolkata@disabilitysupport.gov.in
+                            </a>
+                        </address>
+                        
+                        <div class="coverage-area">
+                            <small class="text-muted">
+                                <strong>Coverage:</strong> West Bengal, Bihar, Jharkhand, Odisha, Assam, NE States
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light" role="region" aria-labelledby="contact-faq">
+    <div class="container">
+        <h2 id="contact-faq" class="text-center mb-5">Frequently Asked Questions</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="contactAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                How quickly will I receive a response to my inquiry?
+                            </button>
+                        </h3>
+                        <div id="collapse1" class="accordion-collapse collapse show" 
+                             aria-labelledby="faq1" data-bs-parent="#contactAccordion">
+                            <div class="accordion-body">
+                                We aim to respond to all inquiries within 24 hours for email submissions and immediately for phone calls during business hours. Urgent matters and grievances are prioritized and addressed within 4-6 hours.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                Can I get assistance in regional languages?
+                            </button>
+                        </h3>
+                        <div id="collapse2" class="accordion-collapse collapse" 
+                             aria-labelledby="faq2" data-bs-parent="#contactAccordion">
+                            <div class="accordion-body">
+                                Yes, our helpline supports multiple regional languages including Hindi, Bengali, Tamil, Telugu, Marathi, Gujarati, and Kannada. You can also submit forms in your preferred language, and we'll respond accordingly.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                What information should I include when reporting an accessibility issue?
+                            </button>
+                        </h3>
+                        <div id="collapse3" class="accordion-collapse collapse" 
+                             aria-labelledby="faq3" data-bs-parent="#contactAccordion">
+                            <div class="accordion-body">
+                                Please provide: specific location/website, type of accessibility barrier, your disability type, date and time of incident, any documentation or photos if available, and your contact information for follow-up.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                How can I suggest new resources or services for the platform?
+                            </button>
+                        </h3>
+                        <div id="collapse4" class="accordion-collapse collapse" 
+                             aria-labelledby="faq4" data-bs-parent="#contactAccordion">
+                            <div class="accordion-body">
+                                We welcome suggestions! Use the contact form with "Resource Suggestion" as the inquiry type, or email us directly at support@disabilitysupport.gov.in. Include details about the resource, its benefits, and how it helps the disability community.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const formObject = {};
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
+    
+    // Show success message (in a real implementation, this would submit to a server)
+    const submitButton = document.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
+    
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+    submitButton.disabled = true;
+    
+    setTimeout(() => {
+        submitButton.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+        submitButton.classList.remove('btn-primary');
+        submitButton.classList.add('btn-success');
+        
+        // Show success alert
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-success mt-3';
+        alert.innerHTML = `
+            <i class="fas fa-check-circle me-2"></i>
+            <strong>Thank you!</strong> Your message has been sent successfully. 
+            We will respond within 24 hours.
+        `;
+        
+        document.getElementById('contactForm').appendChild(alert);
+        
+        // Reset form after delay
+        setTimeout(() => {
+            this.reset();
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+            submitButton.classList.remove('btn-success');
+            submitButton.classList.add('btn-primary');
+            alert.remove();
+        }, 3000);
+    }, 1500);
+});
+</script>
+{% endblock %}

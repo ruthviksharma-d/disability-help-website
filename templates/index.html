@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Disability Support India{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">
+                    Empowering Lives, <span class="text-warning">Enabling Dreams</span>
+                </h1>
+                <p class="lead mb-4">
+                    Your comprehensive digital platform for disability services, benefits, and support across India. 
+                    Access city-specific information tailored to your needs. For further info contact helplines.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#city-selector" class="btn btn-warning btn-lg" aria-label="Select your city to get started">
+                        <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>Get Started
+                    </a>
+                    <a href="{{ url_for('emergency_help') }}" class="btn btn-outline-light btn-lg" aria-label="Access emergency help">
+                        <i class="fas fa-phone me-2" aria-hidden="true"></i>Emergency Help
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-universal-access display-1 text-warning" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- City Selector Section -->
+<section id="city-selector" class="py-5 bg-light" role="region" aria-labelledby="city-selector-heading">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 id="city-selector-heading" class="mb-4">Select Your City</h2>
+                <p class="lead mb-4">Choose your city to access personalized disability services and support information</p>
+                
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <form id="city-form" role="form">
+                            <div class="row g-3 align-items-end">
+                                <div class="col-md-8">
+                                    <label for="city-select" class="form-label fw-bold">Select Your City:</label>
+                                    <select class="form-select form-select-lg" id="city-select" name="city" 
+                                            aria-describedby="city-help" required>
+                                        <option value="">Choose your city...</option>
+                                        {% for city in cities %}
+                                        <option value="{{ city.name }}" data-state="{{ city.state }}">
+                                            {{ city.name }}, {{ city.state }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <div id="city-help" class="form-text">
+                                        This will customize the information based on your location
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100" 
+                                            aria-label="Go to city dashboard">
+                                        <i class="fas fa-arrow-right me-2" aria-hidden="true"></i>Go
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-3">
+                            <button id="detect-location-btn" class="btn btn-outline-primary" 
+                                    aria-label="Auto-detect your location">
+                                <i class="fas fa-location-arrow me-2" aria-hidden="true"></i>Auto-detect Location
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Access Features -->
+<section class="py-5" role="region" aria-labelledby="features-heading">
+    <div class="container">
+        <h2 id="features-heading" class="text-center mb-5">Quick Access Services</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-file-alt fa-3x text-primary" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Government Schemes</h3>
+                        <p class="card-text">Access national and state-specific disability schemes and benefits</p>
+                        <a href="{{ url_for('schemes') }}" class="btn btn-outline-primary" 
+                           aria-label="View government schemes">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-tools fa-3x text-success" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Assistive Products</h3>
+                        <p class="card-text">Find aids, devices, and technologies to support independent living</p>
+                        <a href="{{ url_for('assistive_products') }}" class="btn btn-outline-success" 
+                           aria-label="View assistive products">Explore</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-gavel fa-3x text-warning" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Know Your Rights</h3>
+                        <p class="card-text">Understand your rights under RPWD Act 2016 and other laws</p>
+                        <a href="{{ url_for('legal_rights') }}" class="btn btn-outline-warning" 
+                           aria-label="View legal rights information">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-phone fa-3x text-danger" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="card-title h5">Emergency Help</h3>
+                        <p class="card-text">24/7 helplines and emergency support services</p>
+                        <a href="{{ url_for('emergency_help') }}" class="btn btn-outline-danger" 
+                           aria-label="Access emergency help">Get Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Statistics -->
+<section class="py-5 bg-light" role="region" aria-labelledby="stats-heading">
+    <div class="container">
+        <h2 id="stats-heading" class="text-center mb-5">Making a Difference</h2>
+        
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-primary">50+</div>
+                    <div class="stat-label">Government Schemes</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-success">1000+</div>
+                    <div class="stat-label">Help Centers</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-warning">200+</div>
+                    <div class="stat-label">Cities Covered</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-item">
+                    <div class="stat-number display-4 fw-bold text-danger">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Updates -->
+<section class="py-5" role="region" aria-labelledby="updates-heading">
+    <div class="container">
+        <h2 id="updates-heading" class="text-center mb-5">Recent Updates</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-bullhorn text-primary me-3" aria-hidden="true"></i>
+                            <span class="badge bg-primary">New Scheme</span>
+                        </div>
+                        <h3 class="card-title h5">Enhanced UDID Services</h3>
+                        <p class="card-text">New online portal for faster UDID application and renewal process launched nationwide.</p>
+                        <small class="text-muted">Updated 2 days ago</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-calendar text-success me-3" aria-hidden="true"></i>
+                            <span class="badge bg-success">Event</span>
+                        </div>
+                        <h3 class="card-title h5">National Disability Day</h3>
+                        <p class="card-text">Special events and awareness programs scheduled across major cities.</p>
+                        <small class="text-muted">December 3, 2025</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-tools text-warning me-3" aria-hidden="true"></i>
+                            <span class="badge bg-warning text-dark">Technology</span>
+                        </div>
+                        <h3 class="card-title h5">New Assistive Devices</h3>
+                        <p class="card-text">Latest assistive technologies now available through government subsidy programs.</p>
+                        <small class="text-muted">Updated 1 week ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('city-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const citySelect = document.getElementById('city-select');
+    const selectedCity = citySelect.value;
+    
+    if (selectedCity) {
+        window.location.href = `/city/${encodeURIComponent(selectedCity)}`;
+    } else {
+        alert('Please select a city');
+    }
+});
+
+// Auto-detect location functionality
+document.getElementById('detect-location-btn').addEventListener('click', function() {
+    if (navigator.geolocation) {
+        this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Detecting...';
+        
+        navigator.geolocation.getCurrentPosition(function(position) {
+            // In a real implementation, you would use a reverse geocoding service
+            // For now, we'll default to Delhi
+            document.getElementById('city-select').value = 'Delhi';
+            document.getElementById('detect-location-btn').innerHTML = 
+                '<i class="fas fa-check text-success me-2"></i>Location Detected';
+        }, function(error) {
+            document.getElementById('detect-location-btn').innerHTML = 
+                '<i class="fas fa-exclamation-triangle text-warning me-2"></i>Unable to detect';
+            console.error('Geolocation error:', error);
+        });
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+});
+</script>
+{% endblock %}

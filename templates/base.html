@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Disability Support India{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    
+    <!-- Accessibility and SEO meta tags -->
+    <meta name="description" content="{% block description %}Comprehensive disability support services and benefits information for individuals with disabilities in India{% endblock %}">
+    <meta name="keywords" content="disability, support, India, RPWD Act, benefits, schemes, accessibility">
+    <meta name="author" content="Disability Support India">
+    <meta property="og:title" content="{% block og_title %}Disability Support India{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}City-specific disability services and support information{% endblock %}">
+    <meta property="og:type" content="website">
+    
+    <!-- Skip to main content link for screen readers -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link sr-only sr-only-focusable">Skip to main content</a>
+    
+    <!-- Accessibility toolbar -->
+    <div id="accessibility-toolbar" class="accessibility-toolbar bg-dark text-light p-2" role="toolbar" aria-label="Accessibility options">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="accessibility-controls">
+                <button id="theme-toggle-btn" class="btn btn-sm btn-outline-light me-2" aria-label="Switch to dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i> Dark Theme
+                </button>
+                <button id="font-size-btn" class="btn btn-sm btn-outline-light me-2" aria-label="Increase font size">
+                    <i class="fas fa-text-height" aria-hidden="true"></i> Font Size
+                </button>
+                <button id="high-contrast-btn" class="btn btn-sm btn-outline-light me-2" aria-label="Toggle high contrast">
+                    <i class="fas fa-adjust" aria-hidden="true"></i> High Contrast
+                </button>
+                <button id="screen-reader-btn" class="btn btn-sm btn-outline-light" aria-label="Enable screen reader mode">
+                    <i class="fas fa-volume-up" aria-hidden="true"></i> Audio
+                </button>
+            </div>
+            <div class="language-selector">
+                <select id="language-select" class="form-select form-select-sm" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="mr">मराठी</option>
+                    <option value="gu">ગુજરાતી</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">
+                <i class="fas fa-universal-access me-2" aria-hidden="true"></i>
+                <span>Disability Support India</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}" aria-label="Home page">
+                            <i class="fas fa-home me-1" aria-hidden="true"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('schemes') }}" aria-label="Schemes and benefits">
+                            <i class="fas fa-file-alt me-1" aria-hidden="true"></i>Schemes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('assistive_products') }}" aria-label="Assistive products">
+                            <i class="fas fa-tools me-1" aria-hidden="true"></i>Assistive Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('events') }}" aria-label="Events and programs">
+                            <i class="fas fa-calendar me-1" aria-hidden="true"></i>Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('reservations') }}" aria-label="Reservation information">
+                            <i class="fas fa-percent me-1" aria-hidden="true"></i>Reservations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('legal_rights') }}" aria-label="Legal rights">
+                            <i class="fas fa-gavel me-1" aria-hidden="true"></i>Legal Rights
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('emergency_help') }}" aria-label="Emergency help">
+                            <i class="fas fa-phone me-1" aria-hidden="true"></i>Emergency Help
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Search form -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="search-input" placeholder="Search services..." 
+                           aria-label="Search disability services">
+                    <button class="btn btn-outline-light" type="submit" aria-label="Submit search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search results dropdown -->
+    <div id="search-results" class="search-results container" style="display: none;" role="region" aria-label="Search results">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div id="search-results-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main id="main-content" role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p class="mb-3">Empowering individuals with disabilities across India by providing comprehensive information about services, benefits, and support.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('schemes') }}" class="text-light text-decoration-none">Government Schemes</a></li>
+                        <li><a href="{{ url_for('legal_rights') }}" class="text-light text-decoration-none">Know Your Rights</a></li>
+                        <li><a href="{{ url_for('emergency_help') }}" class="text-light text-decoration-none">Emergency Help</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Emergency Contacts</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2" aria-hidden="true"></i>National Emergency: <strong>112</strong></li>
+                        <li><i class="fas fa-headset me-2" aria-hidden="true"></i>Disability Helpline: <strong>1800-111-555</strong></li>
+                        <li><i class="fas fa-envelope me-2" aria-hidden="true"></i>Email: support@disabilitysupport.gov.in</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Disability Support India. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Compliant with RPWD Act 2016 &amp; WCAG 2.1 AA Standards</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS for maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

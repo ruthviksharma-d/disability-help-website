@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block title %}Government Schemes - Disability Support India{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-primary text-white py-4" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-2">
+                    <i class="fas fa-file-alt me-2" aria-hidden="true"></i>
+                    Government Schemes & Benefits
+                </h1>
+                <p class="lead mb-0">
+                    Comprehensive list of disability schemes and benefits available 
+                    {% if current_city %}in {{ current_city }}{% else %}across India{% endif %}
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <div class="btn-group" role="group" aria-label="View options">
+                    <a href="{{ url_for('schemes') }}" class="btn btn-outline-light">All Schemes</a>
+                    <a href="{{ url_for('assistive_products') }}" class="btn btn-outline-light">Assistive Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-3 bg-light" role="region" aria-labelledby="filter-section">
+    <div class="container">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-6">
+                <label for="scheme-filter" class="form-label fw-bold">Filter by Type:</label>
+                <select class="form-select" id="scheme-filter" aria-describedby="filter-help">
+                    <option value="">All Schemes</option>
+                    <option value="national">National Schemes</option>
+                    <option value="state">State-specific Schemes</option>
+                </select>
+                <div id="filter-help" class="form-text">Filter schemes by coverage area</div>
+            </div>
+            <div class="col-md-6">
+                <label for="scheme-search" class="form-label fw-bold">Search Schemes:</label>
+                <input type="text" class="form-control" id="scheme-search" 
+                       placeholder="Search by scheme name or benefits..." 
+                       aria-describedby="search-help">
+                <div id="search-help" class="form-text">Search through all available schemes</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schemes Grid -->
+<section class="py-5" role="region" aria-labelledby="schemes-list">
+    <div class="container">
+        {% if current_city %}
+        <div class="alert alert-info mb-4" role="alert">
+            <i class="fas fa-info-circle me-2" aria-hidden="true"></i>
+            Showing schemes available for <strong>{{ current_city }}</strong> and national schemes. 
+            <a href="{{ url_for('schemes') }}" class="alert-link">View all schemes</a>
+        </div>
+        {% endif %}
+
+        <h2 id="schemes-list" class="mb-4">Available Schemes</h2>
+        
+        {% if schemes %}
+        <div class="row" id="schemes-container">
+            {% for scheme in schemes %}
+            <div class="col-lg-6 mb-4 scheme-card" 
+                 data-type="{{ scheme.type }}" 
+                 data-name="{{ scheme.name.lower() }}"
+                 data-description="{{ scheme.description.lower() }}">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 pb-0">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h3 class="card-title h5 mb-2">{{ scheme.name }}</h3>
+                            <span class="badge bg-{{ 'primary' if scheme.type == 'national' else 'success' }}">
+                                {{ scheme.type.title() }}
+                            </span>
+                        </div>
+                        <p class="text-muted mb-0">
+                            <i class="fas fa-map-marker-alt me-1" aria-hidden="true"></i>
+                            {{ scheme.state }}
+                        </p>
+                    </div>
+                    
+                    <div class="card-body pt-2">
+                        <p class="card-text mb-3">{{ scheme.description }}</p>
+                        
+                        <!-- Eligibility -->
+                        <div class="mb-3">
+                            <h4 class="h6 fw-bold text-primary">
+                                <i class="fas fa-user-check me-1" aria-hidden="true"></i>
+                                Eligibility
+                            </h4>
+                            <p class="small text-muted">{{ scheme.eligibility }}</p>
+                        </div>
+                        
+                        <!-- Benefits -->
+                        <div class="mb-3">
+                            <h4 class="h6 fw-bold text-success">
+                                <i class="fas fa-gift me-1" aria-hidden="true"></i>
+                                Benefits
+                            </h4>
+                            <ul class="list-unstyled small">
+                                {% for benefit in scheme.benefits %}
+                                <li class="mb-1">
+                                    <i class="fas fa-check text-success me-1" aria-hidden="true"></i>
+                                    {{ benefit }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        
+                        <!-- Application Process -->
+                        <div class="mb-3">
+                            <h4 class="h6 fw-bold text-warning">
+                                <i class="fas fa-clipboard-list me-1" aria-hidden="true"></i>
+                                How to Apply
+                            </h4>
+                            <p class="small text-muted">{{ scheme.application_process }}</p>
+                        </div>
+                        
+                        <!-- Required Documents -->
+                        <div class="mb-3">
+                            <h4 class="h6 fw-bold text-info">
+                                <i class="fas fa-file-alt me-1" aria-hidden="true"></i>
+                                Required Documents
+                            </h4>
+                            <div class="d-flex flex-wrap gap-1">
+                                {% for doc in scheme.documents_required %}
+                                <span class="badge bg-light text-dark">{{ doc }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-transparent border-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="contact-info">
+                                <small class="text-muted">
+                                    <i class="fas fa-phone me-1" aria-hidden="true"></i>
+                                    <a href="tel:{{ scheme.contact }}" class="text-decoration-none">
+                                        {{ scheme.contact }}
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn btn-sm btn-outline-primary" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#schemeModal{{ loop.index }}"
+                                        aria-label="View full details for {{ scheme.name }}">
+                                    <i class="fas fa-eye me-1" aria-hidden="true"></i>
+                                    Full Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheme Detail Modal -->
+            <div class="modal fade" id="schemeModal{{ loop.index }}" tabindex="-1" 
+                 aria-labelledby="schemeModalLabel{{ loop.index }}" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="schemeModalLabel{{ loop.index }}">
+                                {{ scheme.name }}
+                            </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" 
+                                    aria-label="Close modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <span class="badge bg-{{ 'primary' if scheme.type == 'national' else 'success' }} me-2">
+                                    {{ scheme.type.title() }}
+                                </span>
+                                <span class="badge bg-secondary">{{ scheme.state }}</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="h5">Description</h4>
+                                <p>{{ scheme.description }}</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="h5">Eligibility Criteria</h4>
+                                <p>{{ scheme.eligibility }}</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="h5">Benefits</h4>
+                                <ul>
+                                    {% for benefit in scheme.benefits %}
+                                    <li>{{ benefit }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="h5">Application Process</h4>
+                                <p>{{ scheme.application_process }}</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="h5">Required Documents</h4>
+                                <ul>
+                                    {% for doc in scheme.documents_required %}
+                                    <li>{{ doc }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <h4 class="h6">Contact Information</h4>
+                                <p class="mb-0">
+                                    <i class="fas fa-phone me-2" aria-hidden="true"></i>
+                                    <strong>{{ scheme.contact }}</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="tel:{{ scheme.contact }}" class="btn btn-primary">
+                                <i class="fas fa-phone me-1" aria-hidden="true"></i>
+                                Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5">
+            <i class="fas fa-search fa-3x text-muted mb-3" aria-hidden="true"></i>
+            <h3 class="text-muted">No Schemes Found</h3>
+            <p class="text-muted">No schemes are currently available for the selected criteria.</p>
+            <a href="{{ url_for('schemes') }}" class="btn btn-primary">View All Schemes</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Filter functionality
+document.getElementById('scheme-filter').addEventListener('change', function() {
+    filterSchemes();
+});
+
+document.getElementById('scheme-search').addEventListener('input', function() {
+    filterSchemes();
+});
+
+function filterSchemes() {
+    const filterValue = document.getElementById('scheme-filter').value;
+    const searchValue = document.getElementById('scheme-search').value.toLowerCase();
+    const schemeCards = document.querySelectorAll('.scheme-card');
+    
+    schemeCards.forEach(card => {
+        const cardType = card.dataset.type;
+        const cardName = card.dataset.name;
+        const cardDescription = card.dataset.description;
+        
+        let typeMatch = !filterValue || cardType === filterValue;
+        let searchMatch = !searchValue || 
+                         cardName.includes(searchValue) || 
+                         cardDescription.includes(searchValue);
+        
+        if (typeMatch && searchMatch) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

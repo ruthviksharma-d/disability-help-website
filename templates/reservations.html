@@ -1,0 +1,430 @@
+{% extends "base.html" %}
+
+{% block title %}Reservation Information - Disability Support India{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-warning text-dark py-4" role="banner">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="display-5 fw-bold mb-2">
+                    <i class="fas fa-percent me-2" aria-hidden="true"></i>
+                    Reservation Information
+                </h1>
+                <p class="lead mb-0">
+                    Complete guide to reservations and quotas for persons with disabilities in education, employment, and government services
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="{{ url_for('legal_rights') }}" class="btn btn-outline-dark btn-lg">
+                    <i class="fas fa-gavel me-2" aria-hidden="true"></i>
+                    Know Your Rights
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats -->
+<section class="py-4 bg-light" role="region" aria-labelledby="reservation-stats">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-item">
+                    <div class="stat-number h2 fw-bold text-primary">4%</div>
+                    <div class="stat-label">Government Jobs</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-item">
+                    <div class="stat-number h2 fw-bold text-success">5%</div>
+                    <div class="stat-label">Higher Education</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-item">
+                    <div class="stat-number h2 fw-bold text-info">3%</div>
+                    <div class="stat-label">Land Allotment</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <div class="stat-item">
+                    <div class="stat-number h2 fw-bold text-warning">1%</div>
+                    <div class="stat-label">Elected Bodies</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container py-5">
+    <div class="row">
+        <!-- Education Reservations -->
+        <div class="col-lg-6 mb-5">
+            <section role="region" aria-labelledby="education-reservations">
+                <h2 id="education-reservations" class="mb-4">
+                    <i class="fas fa-graduation-cap text-success me-2" aria-hidden="true"></i>
+                    Educational Reservations
+                </h2>
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-success">Higher Education (5% Reservation)</h3>
+                        <p class="card-text">Reserved seats in colleges and universities for persons with benchmark disabilities</p>
+                        
+                        <div class="reservation-details">
+                            <h4 class="h6 fw-bold mb-3">Covered Institutions:</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Central Universities
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    State Universities
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    IITs, IIMs, NITs
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Medical and Engineering Colleges
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check text-success me-2" aria-hidden="true"></i>
+                                    Teacher Training Institutes
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <h4 class="h6 fw-bold mb-2">Disability Categories:</h4>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-light text-dark">Blindness</span>
+                                <span class="badge bg-light text-dark">Low Vision</span>
+                                <span class="badge bg-light text-dark">Hearing Impairment</span>
+                                <span class="badge bg-light text-dark">Locomotor Disability</span>
+                                <span class="badge bg-light text-dark">Cerebral Palsy</span>
+                                <span class="badge bg-light text-dark">Autism</span>
+                                <span class="badge bg-light text-dark">Intellectual Disability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-info">School Education</h3>
+                        <p class="card-text">Inclusive education policies ensuring access to quality education</p>
+                        
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-info me-2" aria-hidden="true"></i>
+                                Free education up to 18 years
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-info me-2" aria-hidden="true"></i>
+                                Reasonable accommodation in examinations
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-info me-2" aria-hidden="true"></i>
+                                Additional time allowances
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-info me-2" aria-hidden="true"></i>
+                                Accessible infrastructure
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Employment Reservations -->
+        <div class="col-lg-6 mb-5">
+            <section role="region" aria-labelledby="employment-reservations">
+                <h2 id="employment-reservations" class="mb-4">
+                    <i class="fas fa-briefcase text-primary me-2" aria-hidden="true"></i>
+                    Employment Reservations
+                </h2>
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-primary">Government Jobs (4% Reservation)</h3>
+                        <p class="card-text">Reserved positions in central and state government departments</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="h6 fw-bold mb-2">Central Government:</h4>
+                                <ul class="list-unstyled small">
+                                    <li class="mb-1">• Group A: 4%</li>
+                                    <li class="mb-1">• Group B: 4%</li>
+                                    <li class="mb-1">• Group C: 4%</li>
+                                    <li class="mb-1">• Group D: 4%</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="h6 fw-bold mb-2">State Government:</h4>
+                                <ul class="list-unstyled small">
+                                    <li class="mb-1">• Class I: 4%</li>
+                                    <li class="mb-1">• Class II: 4%</li>
+                                    <li class="mb-1">• Class III: 4%</li>
+                                    <li class="mb-1">• Class IV: 4%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <h4 class="h6 fw-bold mb-2">Sub-quotas within 4%:</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <small class="text-muted">Visual Impairment: 1%</small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Hearing Impairment: 1%</small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Locomotor Disability: 1%</small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Multiple Disabilities: 1%</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-secondary">Private Sector</h3>
+                        <p class="card-text">Incentives and guidelines for private employers</p>
+                        
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fas fa-check text-secondary me-2" aria-hidden="true"></i>
+                                Tax benefits for hiring PWDs
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-secondary me-2" aria-hidden="true"></i>
+                                Accessibility compliance requirements
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-check text-secondary me-2" aria-hidden="true"></i>
+                                Equal opportunity policies
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- State-wise Breakdown -->
+    <section class="mb-5" role="region" aria-labelledby="state-wise-breakdown">
+        <h2 id="state-wise-breakdown" class="mb-4">
+            <i class="fas fa-map-marked-alt text-info me-2" aria-hidden="true"></i>
+            State-wise Reservation Policies
+        </h2>
+        
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title h5 mb-0">Maharashtra</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Education:</strong> 5% in colleges
+                            </li>
+                            <li class="mb-2">
+                                <strong>Employment:</strong> 4% in state jobs
+                            </li>
+                            <li class="mb-2">
+                                <strong>Special:</strong> Additional quota in professional courses
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title h5 mb-0">Karnataka</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Education:</strong> 5% + super-numerary seats
+                            </li>
+                            <li class="mb-2">
+                                <strong>Employment:</strong> 4% in all categories
+                            </li>
+                            <li class="mb-2">
+                                <strong>Special:</strong> Free bus passes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="card-title h5 mb-0">Tamil Nadu</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Education:</strong> 5% horizontal reservation
+                            </li>
+                            <li class="mb-2">
+                                <strong>Employment:</strong> 4% across all services
+                            </li>
+                            <li class="mb-2">
+                                <strong>Special:</strong> Land allotment preferences
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#stateModal">
+                <i class="fas fa-eye me-2" aria-hidden="true"></i>
+                View All States
+            </button>
+        </div>
+    </section>
+    
+    <!-- How to Apply -->
+    <section class="mb-5" role="region" aria-labelledby="how-to-apply">
+        <h2 id="how-to-apply" class="mb-4">
+            <i class="fas fa-clipboard-list text-danger me-2" aria-hidden="true"></i>
+            How to Apply for Reservations
+        </h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="application-steps">
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Obtain Disability Certificate</h3>
+                            <p class="text-muted">Get certified by a competent medical authority with at least 40% disability</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Apply for UDID Card</h3>
+                            <p class="text-muted">Register for Unique Disability Identity Card for unified access to benefits</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex mb-4">
+                        <div class="step-number bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Submit Applications</h3>
+                            <p class="text-muted">Apply for educational institutions or jobs mentioning disability category</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item d-flex">
+                        <div class="step-number bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" 
+                             style="width: 40px; height: 40px; min-width: 40px;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Provide Documentation</h3>
+                            <p class="text-muted">Submit required certificates and documents during application process</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- State Details Modal -->
+<div class="modal fade" id="stateModal" tabindex="-1" aria-labelledby="stateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="stateModalLabel">State-wise Reservation Details</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>State</th>
+                                <th>Education</th>
+                                <th>Employment</th>
+                                <th>Special Provisions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Andhra Pradesh</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Free travel, pension schemes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Delhi</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Free metro travel, disability pensions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gujarat</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Assistive device subsidies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kerala</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Barrier-free infrastructure</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Punjab</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Land allotment, tax exemptions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>West Bengal</strong></td>
+                                <td>5%</td>
+                                <td>4%</td>
+                                <td>Monthly allowances, free aids</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
