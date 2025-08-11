@@ -1,0 +1,96 @@
+{
+  "events": [
+    {
+      "title": "National Disability Rights Awareness Week",
+      "type": "national",
+      "city": "All Cities",
+      "date": "2025-12-03",
+      "end_date": "2025-12-09",
+      "description": "A week-long awareness campaign about disability rights and RPWD Act 2016",
+      "organizer": "Department of Empowerment of Persons with Disabilities",
+      "venue": "Multiple venues across India",
+      "registration_required": false,
+      "contact": "011-2338-1234"
+    },
+    {
+      "title": "Accessible India Campaign Workshop",
+      "type": "national",
+      "city": "Delhi",
+      "date": "2025-08-15",
+      "description": "Workshop on making public spaces and transport accessible for persons with disabilities",
+      "organizer": "Ministry of Social Justice and Empowerment",
+      "venue": "India Habitat Centre, New Delhi",
+      "registration_required": true,
+      "contact": "011-2338-5678"
+    },
+    {
+      "title": "Assistive Technology Expo Mumbai",
+      "type": "regional",
+      "city": "Mumbai",
+      "date": "2025-09-20",
+      "end_date": "2025-09-22",
+      "description": "Exhibition of latest assistive technologies and devices for persons with disabilities",
+      "organizer": "ADAPT Mumbai",
+      "venue": "Bombay Exhibition Centre, Goregaon",
+      "registration_required": true,
+      "contact": "022-2640-4088"
+    },
+    {
+      "title": "Inclusive Employment Fair",
+      "type": "regional",
+      "city": "Bangalore",
+      "date": "2025-10-05",
+      "description": "Job fair specifically for persons with disabilities with participating companies",
+      "organizer": "Enable India",
+      "venue": "Palace Grounds, Bangalore",
+      "registration_required": true,
+      "contact": "080-4151-4151"
+    },
+    {
+      "title": "Braille Literacy Program",
+      "type": "local",
+      "city": "Chennai",
+      "date": "2025-08-25",
+      "description": "Free Braille literacy training program for visually impaired individuals",
+      "organizer": "Vidyasagar Foundation",
+      "venue": "Foundation Campus, Chennai",
+      "registration_required": true,
+      "contact": "044-2491-1311"
+    },
+    {
+      "title": "Paralympics Training Camp",
+      "type": "national",
+      "city": "Delhi",
+      "date": "2025-11-10",
+      "end_date": "2025-11-20",
+      "description": "Training camp for aspiring Paralympic athletes with disabilities",
+      "organizer": "Paralympic Committee of India",
+      "venue": "Jawaharlal Nehru Stadium",
+      "registration_required": true,
+      "contact": "011-2436-2222"
+    },
+    {
+      "title": "Mental Health Awareness Workshop",
+      "type": "local",
+      "city": "Kolkata",
+      "date": "2025-10-10",
+      "description": "Workshop on mental health support for persons with intellectual disabilities",
+      "organizer": "Destiny Foundation",
+      "venue": "Foundation Center, Salt Lake",
+      "registration_required": true,
+      "contact": "033-2334-7890"
+    },
+    {
+      "title": "Sign Language Training Program",
+      "type": "regional",
+      "city": "Pune",
+      "date": "2025-09-01",
+      "end_date": "2025-09-30",
+      "description": "Monthly Indian Sign Language training program for beginners",
+      "organizer": "Maharashtra Association of the Deaf",
+      "venue": "Community Center, Pune",
+      "registration_required": true,
+      "contact": "020-2555-7777"
+    }
+  ]
+}

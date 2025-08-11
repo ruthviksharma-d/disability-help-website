@@ -1,0 +1,92 @@
+{
+  "schemes": [
+    {
+      "name": "Unique Disability ID (UDID)",
+      "type": "national",
+      "state": "All States",
+      "description": "A unique identification document for persons with disabilities providing single document for accessing various services and benefits.",
+      "eligibility": "Persons with disabilities having 40% or more disability",
+      "benefits": ["Single identity document", "Access to various schemes", "Database creation for better planning"],
+      "application_process": "Apply online at www.swavlambancard.gov.in or at nearest Common Service Center",
+      "documents_required": ["Disability certificate", "Aadhaar card", "Passport size photograph"],
+      "contact": "1800-111-555"
+    },
+    {
+      "name": "Assistance to Disabled Persons (ADIP)",
+      "type": "national",
+      "state": "All States",
+      "description": "Scheme to assist needy disabled persons in procuring durable, sophisticated and scientifically manufactured modern aids and appliances.",
+      "eligibility": "Persons with disabilities having monthly income not exceeding Rs. 20,000",
+      "benefits": ["Free aids and appliances", "Subsidized assistive devices", "Repair and maintenance"],
+      "application_process": "Apply through implementing agencies or district collectors",
+      "documents_required": ["Disability certificate", "Income certificate", "Medical prescription"],
+      "contact": "011-2338-1234"
+    },
+    {
+      "name": "Deen Dayal Disabled Rehabilitation Scheme (DDRS)",
+      "type": "national",
+      "state": "All States",
+      "description": "Financial assistance to NGOs for providing rehabilitation services to persons with disabilities.",
+      "eligibility": "NGOs working for persons with disabilities",
+      "benefits": ["Financial assistance for infrastructure", "Support for rehabilitation programs", "Capacity building"],
+      "application_process": "Apply through online portal of Department of Empowerment of Persons with Disabilities",
+      "documents_required": ["Registration certificate", "Audited accounts", "Project proposal"],
+      "contact": "011-2338-5678"
+    },
+    {
+      "name": "Rajiv Gandhi Scheme for Empowerment of Adolescent Girls (SABLA)",
+      "type": "national",
+      "state": "All States",
+      "description": "Scheme for adolescent girls including those with disabilities focusing on nutrition, life skills and vocational training.",
+      "eligibility": "Adolescent girls aged 11-18 years including those with disabilities",
+      "benefits": ["Nutritional support", "Life skills education", "Vocational training"],
+      "application_process": "Register at nearest Anganwadi center or district women and child development office",
+      "documents_required": ["Age proof", "Disability certificate if applicable", "Aadhaar card"],
+      "contact": "1800-180-1104"
+    },
+    {
+      "name": "Maharashtra Disability Pension Scheme",
+      "type": "state",
+      "state": "Maharashtra",
+      "description": "Monthly pension for persons with disabilities to support their basic needs and improve quality of life.",
+      "eligibility": "Persons with 40% or more disability, age 18-65 years, annual income below Rs. 1 lakh",
+      "benefits": ["Monthly pension of Rs. 600", "Annual increment", "Medical assistance"],
+      "application_process": "Apply at nearest Collector office or online through state portal",
+      "documents_required": ["Disability certificate", "Income certificate", "Age proof", "Bank details"],
+      "contact": "022-2202-8888"
+    },
+    {
+      "name": "Karnataka Divyangjan Sahayata Scheme",
+      "type": "state",
+      "state": "Karnataka",
+      "description": "Comprehensive support scheme for persons with disabilities including financial assistance and rehabilitation services.",
+      "eligibility": "Persons with disabilities certified by competent authority",
+      "benefits": ["Monthly allowance", "Free medical treatment", "Educational support", "Skill development"],
+      "application_process": "Apply at district disability rehabilitation centers",
+      "documents_required": ["Disability certificate", "Aadhaar card", "Income certificate", "Medical reports"],
+      "contact": "080-2220-9999"
+    },
+    {
+      "name": "Tamil Nadu Chief Minister's Comprehensive Health Insurance Scheme",
+      "type": "state",
+      "state": "Tamil Nadu",
+      "description": "Free medical treatment for persons with disabilities and their families through empaneled hospitals.",
+      "eligibility": "BPL families and persons with disabilities",
+      "benefits": ["Free treatment up to Rs. 4 lakh per year", "Coverage for pre-existing conditions", "Cashless treatment"],
+      "application_process": "Register at primary health centers or through online portal",
+      "documents_required": ["Ration card", "Disability certificate", "Aadhaar card", "Family income certificate"],
+      "contact": "044-2857-1111"
+    },
+    {
+      "name": "West Bengal Disability Allowance Scheme",
+      "type": "state",
+      "state": "West Bengal",
+      "description": "Monthly financial assistance to persons with disabilities to meet their basic needs.",
+      "eligibility": "Persons with 40% or more disability, age above 18 years",
+      "benefits": ["Monthly allowance of Rs. 1000", "Additional benefits for severe disabilities", "Medical support"],
+      "application_process": "Apply through block development offices or online portal",
+      "documents_required": ["Disability certificate", "Aadhaar card", "Bank passbook", "Photograph"],
+      "contact": "033-2214-5555"
+    }
+  ]
+}

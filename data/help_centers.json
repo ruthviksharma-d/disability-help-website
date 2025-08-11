@@ -1,0 +1,212 @@
+{
+  "mumbai": [
+    {
+      "name": "National Association for the Blind (NAB)",
+      "type": "NGO",
+      "address": "Worli, Mumbai - 400018",
+      "phone": "022-2493-1388",
+      "services": ["Braille training", "Mobility training", "Computer training", "Job placement"],
+      "timings": "9:00 AM - 6:00 PM",
+      "latitude": 19.0176,
+      "longitude": 72.8562
+    },
+    {
+      "name": "ADAPT - Able Disabled All People Together",
+      "type": "NGO",
+      "address": "Bandra West, Mumbai - 400050",
+      "phone": "022-2640-4088",
+      "services": ["Rehabilitation", "Advocacy", "Accessibility consulting", "Equipment supply"],
+      "timings": "9:30 AM - 5:30 PM",
+      "latitude": 19.0596,
+      "longitude": 72.8295
+    },
+    {
+      "name": "KEM Hospital Disability Services",
+      "type": "Government Hospital",
+      "address": "Parel, Mumbai - 400012",
+      "phone": "022-2413-6051",
+      "services": ["Medical assessment", "Disability certification", "Rehabilitation therapy", "Assistive devices"],
+      "timings": "8:00 AM - 2:00 PM",
+      "latitude": 19.0014,
+      "longitude": 72.8397
+    },
+    {
+      "name": "District Collector Office - Mumbai Suburban",
+      "type": "Government Office",
+      "address": "Bandra East, Mumbai - 400051",
+      "phone": "022-2654-2671",
+      "services": ["Disability certificates", "Scheme applications", "Grievance redressal", "UDID registration"],
+      "timings": "10:00 AM - 5:00 PM",
+      "latitude": 19.0653,
+      "longitude": 72.8526
+    }
+  ],
+  "delhi": [
+    {
+      "name": "All India Institute of Medical Sciences (AIIMS)",
+      "type": "Government Hospital",
+      "address": "Ansari Nagar, New Delhi - 110029",
+      "phone": "011-2659-3333",
+      "services": ["Medical assessment", "Disability certification", "Specialized treatment", "Research"],
+      "timings": "8:00 AM - 8:00 PM",
+      "latitude": 28.5672,
+      "longitude": 77.2100
+    },
+    {
+      "name": "National Centre for Promotion of Employment for Disabled People (NCPEDP)",
+      "type": "NGO",
+      "address": "Vasant Kunj, New Delhi - 110070",
+      "phone": "011-2613-6450",
+      "services": ["Employment support", "Advocacy", "Training programs", "Policy research"],
+      "timings": "9:00 AM - 6:00 PM",
+      "latitude": 28.5244,
+      "longitude": 77.1844
+    },
+    {
+      "name": "Delhi State Disability Commissioner Office",
+      "type": "Government Office",
+      "address": "Vikas Bhawan, IP Estate, New Delhi - 110002",
+      "phone": "011-2337-9821",
+      "services": ["Disability certificates", "Complaint registration", "Scheme information", "Legal support"],
+      "timings": "9:30 AM - 6:00 PM",
+      "latitude": 28.6289,
+      "longitude": 77.2376
+    },
+    {
+      "name": "Samarthyam - National Centre for Accessible Environments",
+      "type": "NGO",
+      "address": "Lajpat Nagar, New Delhi - 110024",
+      "phone": "011-2921-1067",
+      "services": ["Accessibility consulting", "Universal design", "Training", "Audits"],
+      "timings": "9:00 AM - 5:30 PM",
+      "latitude": 28.5675,
+      "longitude": 77.2431
+    }
+  ],
+  "bangalore": [
+    {
+      "name": "National Institute of Mental Health and Neuro Sciences (NIMHANS)",
+      "type": "Government Hospital",
+      "address": "Hosur Road, Bangalore - 560029",
+      "phone": "080-2699-5223",
+      "services": ["Neurological assessment", "Mental health services", "Rehabilitation", "Research"],
+      "timings": "8:00 AM - 8:00 PM",
+      "latitude": 12.9431,
+      "longitude": 77.5956
+    },
+    {
+      "name": "Mobility India",
+      "type": "NGO",
+      "address": "J P Nagar, Bangalore - 560078",
+      "phone": "080-2648-8879",
+      "services": ["Mobility aids", "Rehabilitation services", "Training", "Research"],
+      "timings": "9:00 AM - 5:00 PM",
+      "latitude": 12.9082,
+      "longitude": 77.5917
+    },
+    {
+      "name": "Karnataka State Disability Board",
+      "type": "Government Office",
+      "address": "Vidhana Soudha, Bangalore - 560001",
+      "phone": "080-2225-2828",
+      "services": ["Policy implementation", "Scheme monitoring", "Grievance redressal", "Coordination"],
+      "timings": "10:00 AM - 5:00 PM",
+      "latitude": 12.9791,
+      "longitude": 77.5913
+    },
+    {
+      "name": "Enable India",
+      "type": "NGO",
+      "address": "Koramangala, Bangalore - 560034",
+      "phone": "080-4151-4151",
+      "services": ["Employment support", "Skills training", "Technology training", "Placement services"],
+      "timings": "9:00 AM - 6:00 PM",
+      "latitude": 12.9352,
+      "longitude": 77.6245
+    }
+  ],
+  "chennai": [
+    {
+      "name": "Christian Medical College (CMC)",
+      "type": "Private Hospital",
+      "address": "Vellore, Tamil Nadu - 632004",
+      "phone": "0416-228-1000",
+      "services": ["Medical assessment", "Specialized treatment", "Rehabilitation", "Training"],
+      "timings": "24 hours",
+      "latitude": 12.9186,
+      "longitude": 79.1325
+    },
+    {
+      "name": "Vidyasagar - The Ideas Foundation",
+      "type": "NGO",
+      "address": "Chennai - 600041",
+      "phone": "044-2491-1311",
+      "services": ["Assistive technology", "Computer training", "Employment support", "Research"],
+      "timings": "9:00 AM - 6:00 PM",
+      "latitude": 13.0418,
+      "longitude": 80.2341
+    },
+    {
+      "name": "Tamil Nadu State Disability Welfare Department",
+      "type": "Government Office",
+      "address": "DMS Compound, Chennai - 600006",
+      "phone": "044-2827-4500",
+      "services": ["Scheme administration", "Disability certification", "Financial assistance", "Monitoring"],
+      "timings": "9:30 AM - 5:30 PM",
+      "latitude": 13.0569,
+      "longitude": 80.2497
+    },
+    {
+      "name": "RSRC - Rishi Valley Rural Health Centre",
+      "type": "NGO",
+      "address": "Rishi Valley, Andhra Pradesh - 517352",
+      "phone": "08571-269-229",
+      "services": ["Rural rehabilitation", "Community programs", "Training", "Outreach"],
+      "timings": "8:00 AM - 6:00 PM",
+      "latitude": 13.6500,
+      "longitude": 78.3000
+    }
+  ],
+  "kolkata": [
+    {
+      "name": "Institute of Post Graduate Medical Education and Research (IPGMER)",
+      "type": "Government Hospital",
+      "address": "SSKM Hospital, Kolkata - 700020",
+      "phone": "033-2204-1000",
+      "services": ["Medical assessment", "Disability certification", "Treatment", "Research"],
+      "timings": "24 hours",
+      "latitude": 22.5414,
+      "longitude": 88.3598
+    },
+    {
+      "name": "Blind Relief Association Calcutta",
+      "type": "NGO",
+      "address": "Park Street, Kolkata - 700016",
+      "phone": "033-2229-1823",
+      "services": ["Education for blind", "Vocational training", "Mobility training", "Job placement"],
+      "timings": "9:00 AM - 5:00 PM",
+      "latitude": 22.5546,
+      "longitude": 88.3639
+    },
+    {
+      "name": "West Bengal State Disability Board",
+      "type": "Government Office",
+      "address": "Writers' Building, Kolkata - 700001",
+      "phone": "033-2214-5555",
+      "services": ["Policy implementation", "Scheme coordination", "Grievance handling", "Monitoring"],
+      "timings": "10:00 AM - 5:00 PM",
+      "latitude": 22.5726,
+      "longitude": 88.3639
+    },
+    {
+      "name": "Destiny Foundation",
+      "type": "NGO",
+      "address": "Salt Lake, Kolkata - 700091",
+      "phone": "033-2334-7890",
+      "services": ["Skill development", "Employment support", "Advocacy", "Community programs"],
+      "timings": "9:00 AM - 6:00 PM",
+      "latitude": 22.5868,
+      "longitude": 88.4298
+    }
+  ]
+}
