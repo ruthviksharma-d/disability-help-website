@@ -95,3 +95,8 @@
    http://localhost:5000
    ```
 ---   
+## 🤝 Contributing
+Contributions are welcome! You can:
+- Add more city data
+- Improve accessibility features
+- Enhance translations
