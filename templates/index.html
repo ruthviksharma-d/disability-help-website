@@ -251,11 +251,65 @@ document.getElementById('detect-location-btn').addEventListener('click', functio
         this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Detecting...';
         
         navigator.geolocation.getCurrentPosition(function(position) {
-            // In a real implementation, you would use a reverse geocoding service
-            // For now, we'll default to Delhi
-            document.getElementById('city-select').value = 'Delhi';
-            document.getElementById('detect-location-btn').innerHTML = 
-                '<i class="fas fa-check text-success me-2"></i>Location Detected';
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            // Use OpenStreetMap's Nominatim API for reverse geocoding
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=10&addressdetails=1`)
+                .then(response => response.json())
+                .then(data => {
+                    const address = data.address;
+                    let detectedCity = '';
+                    
+                    // Try to get city name from different possible fields
+                    if (address.city) {
+                        detectedCity = address.city;
+                    } else if (address.town) {
+                        detectedCity = address.town;
+                    } else if (address.village) {
+                        detectedCity = address.village;
+                    } else if (address.municipality) {
+                        detectedCity = address.municipality;
+                    } else if (address.county) {
+                        detectedCity = address.county;
+                    }
+                    
+                    // Map common variations to our city list
+                    const cityMapping = {
+                        'Hyderabad': 'Hyderabad',
+                        'Delhi': 'Delhi',
+                        'Mumbai': 'Mumbai',
+                        'Kolkata': 'Kolkata',
+                        'Chennai': 'Chennai',
+                        'Bangalore': 'Bangalore',
+                        'Pune': 'Pune',
+                        'Ahmedabad': 'Ahmedabad',
+                        'Jaipur': 'Jaipur',
+                        'Lucknow': 'Lucknow'
+                    };
+                    
+                    // Find matching city in our dropdown
+                    const normalizedCity = Object.keys(cityMapping).find(city => 
+                        detectedCity.toLowerCase().includes(city.toLowerCase()) || 
+                        city.toLowerCase().includes(detectedCity.toLowerCase())
+                    );
+                    
+                    if (normalizedCity && document.querySelector(`#city-select option[value="${normalizedCity}"]`)) {
+                        document.getElementById('city-select').value = normalizedCity;
+                        document.getElementById('detect-location-btn').innerHTML = 
+                            '<i class="fas fa-check text-success me-2"></i>Location Detected';
+                    } else {
+                        // If city not found in our list, show the detected city name
+                        document.getElementById('detect-location-btn').innerHTML = 
+                            `<i class="fas fa-exclamation-triangle text-warning me-2"></i>Detected: ${detectedCity}`;
+                        alert(`Location detected: ${detectedCity}. Please select your city from the dropdown.`);
+                    }
+                })
+                .catch(error => {
+                    console.error('Reverse geocoding error:', error);
+                    document.getElementById('detect-location-btn').innerHTML = 
+                        '<i class="fas fa-exclamation-triangle text-warning me-2"></i>Unable to detect';
+                });
         }, function(error) {
             document.getElementById('detect-location-btn').innerHTML = 
                 '<i class="fas fa-exclamation-triangle text-warning me-2"></i>Unable to detect';
