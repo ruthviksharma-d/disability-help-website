@@ -27,10 +27,14 @@
 - `help_centers.json` – NGOs, hospitals, govt offices  
 - `schemes.json` – National and state-level disability schemes
 
+---
+
 ### Static Assets (`/static/`)
 - `CSS/style.css` – Accessibility-focused styles, dark/light mode, high contrast
 - `JS/main.js` – Core site functionality  
 - `JS/accessibility.js` – Screen reader, font scaling, keyboard shortcuts
+
+---
 
 ### Templates (`/templates/`)
 - `base.html` – Layout with accessibility toolbar  
@@ -44,6 +48,8 @@
 - `contact.html` – Contact info  
 - `reservations.html` – Reservation details for PwD
 
+---
+
 ## 🎯 Key Features
 
 ### Accessibility-First Design
@@ -53,7 +59,7 @@
 - Keyboard navigation shortcuts
 - Dark/light mode
 - Multi-language support (8 Indian languages)
-
+---
 ### Core Functionality
 - City auto-detection & manual selection
 - Real-time search across all content
@@ -61,19 +67,19 @@
 - Scheme filtering by category & type
 - Emergency contact quick access
 - Help center maps & details
-
+---
 ### API Endpoints
 - `/api/cities` – Get all cities  
 - `/api/help-centers/<city>` – City-specific help centers  
 - `/api/search` – Search all content types
-
+---
 ## 🌟 User Experience Highlights
 - Mobile-first responsive design
 - Works without JavaScript (progressive enhancement)
 - Optimized loading & lazy loading
 - Clear navigation & structured layout
 - Prominent emergency access
-
+---
 ## 🚀 Getting Started
 
 1. **Install Flask**  
@@ -88,4 +94,4 @@
    ```bash
    http://localhost:5000
    ```
-   
+---   
